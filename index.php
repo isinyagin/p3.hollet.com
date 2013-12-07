@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>CS15 Project 3 -- Web Presentation</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/pres.css" />
 </head>
 
 <body>
