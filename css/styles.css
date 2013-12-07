@@ -1,0 +1,107 @@
+/* Some of the css taken from 
+ * http://johndyer.name/native-fullscreen-javascript-api-plus-jquery-plugin/
+ */
+
+@charset "UTF-8";
+/* CSS Document */
+
+body { font-size:2.5em; }
+
+h1 {
+	font-size:2.25em;
+	margin-bottom: -0.25em;
+}
+
+h2 { font-size:1.2em; }
+
+.slides{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background: linear-gradient(bottom, #000, #666);
+	background: -o-linear-gradient(bottom, #000, #666);
+	background: -moz-linear-gradient(bottom, #000, #666);
+	background: -webkit-linear-gradient(bottom, #000, #666);
+	background: -ms-linear-gradient(bottom, #000, #666);
+	color:#fff;
+	overflow:hidden;
+}
+
+section {
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:36px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	visibility:hidden;
+	transition: all 1s;
+	-moz-transition: all 1s;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	opacity:0;
+	transform:rotate3d(1, 1, 0, 60deg);
+	-moz-transform:rotate3d(1, 1, 0, 60deg);
+	-webkit-transform:rotate3d(1, 1, 0, 60deg);
+	-o-transform:rotate3d(1, 1, 0, 60deg);
+}
+
+section.active {
+	visibility:visible;
+	overflow-y:auto;
+	opacity:1;
+	-webkit-overflow-scrolling: touch;
+	transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+	-o-transition: all 1.5s;
+	transform:none;
+	-moz-transform:none;
+	-webkit-transform:none;
+	-o-transform:none;
+}
+
+section.titleSlide, section.endSlide {
+	padding-top:25%;
+	background:#67BEEA url(../images/background.jpg) left bottom repeat-x;
+}
+
+section p {
+	float: left;
+    width: 50%;
+}
+
+section img {
+	margin-top:1.25em;
+	width:40%;
+	float:right;
+}
+
+@media all and (max-width: 1000px) {
+	body { font-size:1.5em;	}
+}
+
+@media all and (max-width: 799px) {
+	section p, section img { width:100%; }
+	section { padding: 0 16px; }
+	ul { padding-left:14px; }
+}
+
+/* CSS */
+body:-webkit-full-screen {
+	width:100%;
+	height:100%;
+	background-color: black;
+	position:fixed;
+	top:0; right:0; bottom:0; left:0;
+	margin:0;
+	box-sizing:border-box;
+	object-fit:contain;
+}
+
+@media all and (max-height:1000px) {
+	section.titleSlide h1, section.titleSlide h2, section.endSlide h1, section.endSlide h2 {
+		text-shadow: 6px 5px rgba(0, 0, 0, 0.5);
+	}
+}
