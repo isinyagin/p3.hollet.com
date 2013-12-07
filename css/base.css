@@ -1,0 +1,59 @@
+a,
+a:link {
+    outline: none;
+}
+#icontainer h1 {
+    font-weight: 100;
+    font-size: 72px;
+    margin: 20px 0;
+}
+#icontainer {
+    width: 580px;
+    text-align: center;
+    margin: 20px auto;
+}
+#icontainer input[type="text"] {
+    height: 30px;
+    width: 350px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 24px;
+}
+#icontainer input[type="submit"] {
+    height: 56px;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+	width:  auto;
+	background: none;
+}
+#icontainer ul {
+    margin: 15px auto 0;
+    padding: 0;
+    width: 545px;
+}
+#icontainer ul li {
+    list-style-type: none;
+    font-size: 24px;
+    cursor: move;
+    background-color: #efefef;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-align: left;
+}
+#icontainer ul li span {
+    cursor: text;
+}
+#icontainer ul li a,
+#icontainer ul li a:link {
+    float: right;
+    display: none;
+    text-decoration: none;
+    color: #f03;
+}
+#icontainer ul li a:hover {
+    text-decoration: underline;
+}
