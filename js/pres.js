@@ -10,7 +10,7 @@ $(function() {
                 prevSlide();
         });
         
-        /* mobile support */
+        /* mobile support for swiping */
         $('.slides').swipe({
             swipe:function(event, direction, distance, duration, fingerCount) {
                 switch(direction) {
@@ -43,7 +43,7 @@ $(function() {
 
     function prevSlide(){
         gotoSlide(--currentSlide);
-        if (li_bullets) $('section.active li').show();
+        if (li_bullets) $('section.active li').show();  /* show previously shown bullets */
     }
 
     function gotoSlide(n){
@@ -51,10 +51,10 @@ $(function() {
             currentSlide = n;
             $('section').removeClass('active').eq(currentSlide).addClass('active');
         }
-        if (li_bullets) $('section.active li').hide();
+        if (li_bullets) $('section.active li').hide();  /* hide all bullets on entering the slide */
     }
 
-}());   
+}());  /* not to pollute global name space */ 
 
 /**
   Source: http://johndyer.name/native-fullscreen-javascript-api-plus-jquery-plugin/

@@ -10,15 +10,16 @@
 <body>
     <div class="slides">
         <section class="titleSlide">
-            <h1>Test presentation</h1>
+            <h1>CS15 presentation project</h1>
             <h2>Ivan Sinyagin</h2>
         </section>
 
         <section>
-            <h1>Why a presentation</h1>
+            <h1>Presentation project</h1>
             <ul>
                 <li>Fun to explore both jquery and css</li>
                 <li>Some practice with mobile API (swipe)</li>
+                <li>Interactive bullet points</li>
                 <li>Good reusable tool</li>
             </ul>
         </section>
@@ -30,7 +31,7 @@
         </section>
 
         <section class="endSlide">
-            <h1>Questions?</h1>
+            <h1>Want to see more?</h1>
         </section>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
