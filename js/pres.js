@@ -54,7 +54,7 @@ $(function() {
         if (li_bullets) $('section.active li').hide();  /* hide all bullets on entering the slide */
     }
 
-}());  /* not to pollute global name space */ 
+}());  
 
 /**
   Source: http://johndyer.name/native-fullscreen-javascript-api-plus-jquery-plugin/
