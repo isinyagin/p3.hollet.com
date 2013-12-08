@@ -1,20 +1,21 @@
 $(function() {
     var currentSlide = 0;
+    var li_bullets = true;
 
     $(function(){
         $(document).keyup(function(e) {
              if (e.keyCode == 39 || e.keyCode == 40 || e.keyCode == 32) 
-                next();
+                nextSlide();
              else if (e.keyCode == 37 || e.keyCode == 38) 
-                back();
+                prevSlide();
         });
         
         /* mobile support */
         $('.slides').swipe({
             swipe:function(event, direction, distance, duration, fingerCount) {
                 switch(direction) {
-                    case "left": next(); break;
-                    case "right": back(); break;	
+                    case "left": nextSlide(); break;
+                    case "right": prevSlide(); break;	
                 }
             }
         });
@@ -31,21 +32,29 @@ $(function() {
         $('section').eq(currentSlide).addClass('active');
     }
 
-    function next(){
-        goto(++currentSlide);
+    function nextSlide(){
+        /* if there are bullets, step through them and return */
+        if (li_bullets && $('section.active li:hidden').length) {
+            $('section.active li:hidden').first().fadeIn();
+            return
+        }
+        gotoSlide(++currentSlide);
     }
 
-    function back(){
-        goto(--currentSlide);
+    function prevSlide(){
+        gotoSlide(--currentSlide);
+        if (li_bullets) $('section.active li').show();
     }
 
-    function goto(n){
+    function gotoSlide(n){
         if (n > -1 && n < $('section').length) {
             currentSlide = n;
             $('section').removeClass('active').eq(currentSlide).addClass('active');
         }
+        if (li_bullets) $('section.active li').hide();
     }
-})();   /* not to pollute global namespace */
+
+}());   
 
 /**
   Source: http://johndyer.name/native-fullscreen-javascript-api-plus-jquery-plugin/
