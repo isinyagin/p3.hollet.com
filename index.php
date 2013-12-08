@@ -26,7 +26,7 @@
 
         <section>
             <h1>Can we add a pic?</h1>
-            <img src="http://cs61.seas.harvard.edu/cs61wiki/skins/common/images/cs61hello.jpg" />
+            <img src="http://cs61.seas.harvard.edu/cs61wiki/skins/common/images/cs61hello.jpg" alt="Hello Kitty image">
             <p>Hello 61 Kitty</p>
         </section>
 
